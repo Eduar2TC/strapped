@@ -5,7 +5,28 @@ document.addEventListener("DOMContentLoaded", function (event) {
         typeSpeed: 40,
         backSpeed: 30,
     });
+    
 });
+//Toggle css sizes icons
+window.addEventListener('resize', function () {
+    const bx = document.querySelectorAll('.bx');
+    if (window.innerWidth < 700) {
+
+        bx.forEach(f => {
+            f.classList.remove('bx-md');
+            f.classList.add('bx-sm');
+        });
+
+    }
+    else {
+        bx.forEach(f => {
+            f.classList.remove('bx-sm');
+            f.classList.add('bx-md');
+        });
+    }
+});
+
+
 /*Collapses */
 window.onload = function(){
     /*Headers*/
@@ -59,4 +80,5 @@ window.onload = function(){
             });
         });
     }
+
 };
